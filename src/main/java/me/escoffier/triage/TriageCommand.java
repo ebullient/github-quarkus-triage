@@ -65,10 +65,10 @@ public class TriageCommand implements Runnable {
         final String content;
 
         if (output.endsWith(".md")) {
-            content = Templates.triageReport(projects, count, new SimpleDateFormat("dd-MM-yyyy").format(new Date()))
+            content = Templates.triageReport(projects, count, new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z").format(new Date()))
                     .render();
         } else {
-            content = Templates.report(projects, count, new SimpleDateFormat("dd-MM-yyyy").format(new Date()))
+            content = Templates.report(projects, count, new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss Z").format(new Date()))
                     .render();
         }
 
